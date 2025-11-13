@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="españa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Formularios</title>
+</head>
+<body>
+    <h1>Información sobre el producto</h1>
+    <fieldset>
+        <legend>Datos básicos</legend>
+        <label for="nombre">Nombre</label> <br/>
+        <input type="text" id="nombre" name="nombre" size="40"/>
+        <br/>
+        <br>
+        <label for="descripcion">Descripción</label> <br/>
+        <textarea type="text" id="descripcion" name="descripcion"></textarea>
+        <br/>
+        <br>
+        <label for="foto">Foto</label>
+        <input type="text" name="foto" id="foto">
+        <input type="file">
+        <br>
+        <br>
+        <input type="checkbox" name="contador" id="contador"> Añadir contador visitas
+    </fieldset>
+
+    <form>
+        <fieldset>
+        <legend>Datos económicos</legend>
+        <label for="precio">Precio</label>
+        <input type="number" name="precio" id="precio">&nbsp;€ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Impuestos
+        <select name="impuestos">
+            <option value="1">1%</option>
+            <option value="1">2%</option>
+            <option value="1">3%</option>
+            <option value="1">4%</option>
+            <option value="1">5%</option>
+            <option value="1">6%</option>
+            <option value="1">7%</option>
+            <option value="1">8%</option>
+            <option value="1">9%</option>
+            <option value="1">10%</option>
+        </select>
+        <br>
+        <br>
+        <label for="promocion">Promoción</label> <br/>
+        <input type="radio" id="promocion" name="promocion"/>Ninguno <br>
+        <input type="radio" id="promocion" name="promocion"/>Transporte gratuito <br>
+        <input type="radio" id="promocion" name="promocion"/>Descuento 5%
+        <br/>
+    </fieldset>   
+    </form>
+
+     <form>
+        <h1>Formulario de Alta</h1>
+    <h3>Nombre y apellidos <sup>*</sup></h3>
+    <input type="text" name="nombre" id="nombre" required>
+    <label for="nombre">Nombre</label>
+    <input type="text" name="a1" id="a1" required>
+    <label for="a1">Primero apellido</label>
+    <input type="text" name="a2" id="a2" required>
+    <label for="a2">Segundo apellido</label>
+    <br>
+    <h3>Dirección<sup>*</sup></h3>
+    <input type="text" name="cnpp" id="cnpp" required>
+    <label for="cnpp">Calle, número, piso, puerta</label>
+    <input type="number" name="cp" id="cp" required>
+    <label for="cp">Código postal</label>
+    <input type="text" name="municipio" id="municipio" required>
+    <label for="municipio">Municipio</label>
+    <select name="provincia" id="provincia" required>
+        <option value="sevilla">Sevilla</option>
+        <option value="cadiz">Cádiz</option>
+        <option value="huelva">Huelva</option>
+        <option value="cordoba">Córdoba</option>
+        <option value="almeria">Almeria</option>
+        <option value="granada">Granada</option>
+        <option value="jaen">Jaén</option>
+    </select>
+    Provincia
+    <select name="pais" id="pais" required>
+        <option value="españa">España</option>
+    </select>
+    País
+    <h3>Email<sup>*</sup></h3>
+    <input type="email" name="email" id="email" required>
+    <h3>Teléfono<sup>*</sup></h3>
+    <input type="number" name="tfno" id="tfno" required>
+    <label for="tfno">Fijo</label>
+    <input type="number" name="tfno" id="tfno" required>
+    <label for="tfno">Móvil</label>
+    <br>
+    <br>
+    <input type="submit" value="Enviar">
+    <br>
+    <br>
+    <br>
+    </form>
+    
+    <form>
+        <table style="border: 1px dashed;" cellspacing="0" cellpadding="20">
+        <caption><h1>Formulario de Altas</h1></caption>
+        <tr>
+            <td>
+                <h3><label for="nombre">Nombres y apellidos <sup style="color: red;">*</sup></label></h3>
+                <br>
+                <input type="text" name="nombre" id="nombre" required><br>
+                <label for="nombre">Nombre</label>
+                <br><br>
+                <input type="text" name="a1" id="a1" required><br>
+                <label for="a1">Primer apellido</label>
+                <br><br>
+                <input type="text" name="a2" id="a2" required><br>
+                <label for="a2">Segundo apellido</label>
+                <br><br><br><br><br><br><br>
+                <h3><label for="email">Email <sup style="color: red;">*</sup></label></h3>
+                <input type="email" id="email" name="email" required/>
+                <br><br><br><br>
+                <input type="submit" value="Enviar">
+            </td>
+            <td>
+                <h3><label for="direccion">Dirección <sup style="color: red;">*</sup></label></h3>
+                <br>
+                <input type="text" name="cnpp" id="cnpp" required><br>
+                <label for="cnpp">Calle, número, piso, puerta</label>
+                <br><br>
+                <input type="number" name="cp" id="cp" required><br>
+                <label for="cp">Código postal</label>
+                <br><br>
+                <input type="text" name="municipio" id="municipio" required><br>
+                <label for="municipio">Municipio</label>
+                <br><br>
+                <select name="provincia" id="provincia" required>
+                <option value="" selected></option>
+                <option value="sevilla">Sevilla</option>
+                <option value="cadiz">Cádiz</option>
+                <option value="huelva">Huelva</option>
+                <option value="cordoba">Córdoba</option>
+                <option value="almeria">Almeria</option>
+                <option value="granada">Granada</option>
+                <option value="jaen">Jaén</option>
+            </select>            
+            <select name="pais" id="pais" required>
+            <option value="" selected></option>
+            <option value="españa">España</option>
+            </select><br>
+            Provincia &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            País
+            <br><br><br><br>
+             <h3><label for="tfno">Teléfono<sup style="color: red;">*</sup></label></h3>
+                <input type="number" name="tfno" id="tfno" required>
+                <input type="number" name="tfno2" id="tfno2" required><br>
+                <label for="tfno2">Fijo</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label for="tfno">Móvil</label>
+                <br><br><br><br>
+            </td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    </form>
+    
+
+</body>
+</html>
