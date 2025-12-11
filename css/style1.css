@@ -1,0 +1,10 @@
+p.claseP1 {
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    font-size: 20px;
+    text-align: left;
+    text-indent: 30px;
+}
