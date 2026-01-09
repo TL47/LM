@@ -1,0 +1,35 @@
+body {
+    background-color: bisque;
+    color: rgb(192, 83, 192);
+}
+
+.lista {
+    float: left;
+    padding-top: 65px;
+}
+
+.titulo h1 {
+    font-family: "Comic Relief", system-ui;
+    padding-left: 135px;
+}
+
+.imagen {
+    float: left;
+    width: 35%;
+    margin-left: 20px;
+    margin-top: 16px;
+}
+
+.imagen img {
+    width: 100%;
+}
+
+.titulo p {
+    background-color: plum;
+    border: brown, 5px, solid;
+    padding: 10px;
+    color: black;
+    float: left;
+    margin-left: 50px;
+    width: 50%;
+}
