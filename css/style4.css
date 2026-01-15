@@ -1,0 +1,41 @@
+body {
+    background-color: black;
+}
+
+iframe {
+    width: 96%;
+    height: 96%;
+}
+
+.seccion {
+    float: left;
+    width: 47vw;
+    height: 45vh;
+    margin: 0.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.8);
+}
+
+.azul { 
+    background-color: blue; 
+    border: 3px solid #0055ff;
+}
+
+.rojo { 
+    background-color: red; 
+    border: 3px solid #990000;
+}
+
+.amarillo { 
+    background-color: yellow; 
+    border: 3px solid #cccc00;
+    flex-direction: column;
+}
+
+.verde { 
+    background-color: green; 
+    border: 3px solid #006400;
+}
