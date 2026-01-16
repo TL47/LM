@@ -7,6 +7,23 @@ iframe {
     height: 96%;
 }
 
+menu {
+    border: 5px solid rgb(124, 124, 12);
+    border-radius: 4px;
+    box-shadow: 4px -6px 3px rgb(80, 80, 7);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-inline-start: 0;
+    background-color: rgb(255, 255, 122);
+}
+
+menu a {
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
 .seccion {
     float: left;
     width: 47vw;
@@ -20,21 +37,21 @@ iframe {
 
 .azul { 
     background-color: blue; 
-    border: 3px solid #0055ff;
+    border: 5px solid #0055ff;
 }
 
 .rojo { 
     background-color: red; 
-    border: 3px solid #990000;
+    border: 5px solid #990000;
 }
 
 .amarillo { 
     background-color: yellow; 
-    border: 3px solid #cccc00;
+    border: 5px solid #cccc00;
     flex-direction: column;
 }
 
 .verde { 
     background-color: green; 
-    border: 3px solid #006400;
+    border: 5px solid #006400;
 }

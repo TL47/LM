@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="19" class="java.beans.XMLDecoder">
+ <object class="java.util.HashMap">
+  <void method="put">
+   <string>textAlign</string>
+   <string>left</string>
+  </void>
+  <void method="put">
+   <string>originalHash</string>
+   <string>550a18aaa6fb660a3b95997135bd6ca9</string>
+  </void>
+  <void method="put">
+   <string>authorImage</string>
+   <string>Team-2018-g.jpg</string>
+  </void>
+  <void method="put">
+   <string>originalPath</string>
+   <string>C:\Users\Laza\AppData\Roaming\JAlbum\skins\Story\templates\About.htt</string>
+  </void>
+  <void method="put">
+   <string>aboutText</string>
+   <string>&lt;p&gt;Our team is made up of &lt;b&gt;&lt;a href=&quot;mailto:david@jalbum.net&quot;&gt;David Ekholm&lt;/a&gt;&lt;/b&gt; as CEO, jAlbum founder and client developer, &lt;b&gt;&lt;a href=&quot;mailto:anders@jalbum.net&quot;&gt;Anders Callertun&lt;/a&gt;&lt;/b&gt; as backend developer, site manager, and &lt;b&gt;&lt;a href=&quot;mailto:laza@jalbum.net&quot;&gt;Laszlo Molnar&lt;/a&gt;&lt;/b&gt; (Laza) as skin developer and web designer.&lt;/p&gt;
+&lt;p&gt;(This block was made by using the &quot;About&quot; template: &lt;code&gt;New page → About.htt&lt;/code&gt;)&lt;/p&gt;</string>
+  </void>
+  <void method="put">
+   <string>aboutHeader</string>
+   <string>The people behind jAlbum</string>
+  </void>
+ </object>
+</java>

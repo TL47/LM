@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="14.0.1" class="java.beans.XMLDecoder">
+ <object class="java.util.HashMap">
+  <void method="put">
+   <string>google_id</string>
+   <string></string>
+  </void>
+  <void method="put">
+   <string>custom_link2</string>
+   <string></string>
+  </void>
+  <void method="put">
+   <string>custom_link3</string>
+   <string></string>
+  </void>
+  <void method="put">
+   <string>custom_links_label</string>
+   <string></string>
+  </void>
+  <void method="put">
+   <string>vimeo_id</string>
+   <string></string>
+  </void>
+  <void method="put">
+   <string>tumblr_id</string>
+   <string></string>
+  </void>
+  <void method="put">
+   <string>custom_link1</string>
+   <string></string>
+  </void>
+  <void method="put">
+   <string>skype_id</string>
+   <string></string>
+  </void>
+  <void method="put">
+   <string>originalHash</string>
+   <string>7bacf3fbb7b122e65f54545c18cdb794</string>
+  </void>
+  <void method="put">
+   <string>map_location</string>
+   <string></string>
+  </void>
+  <void method="put">
+   <string>foursquare_id</string>
+   <string></string>
+  </void>
+  <void method="put">
+   <string>twitter_id</string>
+   <string>jAlbumFrog</string>
+  </void>
+  <void method="put">
+   <string>postal_address</string>
+   <string></string>
+  </void>
+  <void method="put">
+   <string>flickr_id</string>
+   <string></string>
+  </void>
+  <void method="put">
+   <string>linkedin_id</string>
+   <string></string>
+  </void>
+  <void method="put">
+   <string>youtube_id</string>
+   <string></string>
+  </void>
+  <void method="put">
+   <string>facebook_id</string>
+   <string>jAlbumFrog</string>
+  </void>
+  <void method="put">
+   <string>instagram_id</string>
+   <string></string>
+  </void>
+  <void method="put">
+   <string>jalbum_id</string>
+   <string>dor</string>
+  </void>
+  <void method="put">
+   <string>email_address</string>
+   <string>support@jalbum.net</string>
+  </void>
+  <void method="put">
+   <string>custom_linktext2</string>
+   <string></string>
+  </void>
+  <void method="put">
+   <string>custom_linktext1</string>
+   <string></string>
+  </void>
+  <void method="put">
+   <string>pinterest_id</string>
+   <string></string>
+  </void>
+  <void method="put">
+   <string>custom_linktext3</string>
+   <string></string>
+  </void>
+  <void method="put">
+   <string>map_zoom</string>
+   <int>16</int>
+  </void>
+  <void method="put">
+   <string>phone_number</string>
+   <string></string>
+  </void>
+  <void method="put">
+   <string>originalPath</string>
+   <string>C:\Users\Laza\AppData\Roaming\JAlbum\skins\Story\templates\Contact.htt</string>
+  </void>
+ </object>
+</java>

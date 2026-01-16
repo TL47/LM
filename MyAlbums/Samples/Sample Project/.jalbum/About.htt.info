@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="14.0.1" class="java.beans.XMLDecoder">
+ <object class="java.util.HashMap">
+  <void method="put">
+   <string>originalHash</string>
+   <string>67395280a28c1932113d772c01f3918d</string>
+  </void>
+  <void method="put">
+   <string>authorImage</string>
+   <string>jalbum-head.png</string>
+  </void>
+  <void method="put">
+   <string>originalPath</string>
+   <string>C:\Users\Laza\AppData\Roaming\JAlbum\skins\Story\templates\About.htt</string>
+  </void>
+  <void method="put">
+   <string>aboutText</string>
+   <string>&lt;p&gt;jAlbum is a desktop application that &lt;b&gt;converts your photos into stunning web photo albums&lt;/b&gt; you can upload to any site. With us you don&apos;t have worry about privacy – we never sell our user&apos;s data.&lt;/p&gt;
+&lt;p&gt;We are selling&amp;nbsp;&lt;a href=&quot;https://jalbum.net/en/purchase&quot;&gt;jAlbum Licenses&lt;/a&gt;, which are good for those who run their own websites, and &lt;a href=&quot;https://jalbum.net/en/purchase&quot;&gt;Storage plans&lt;/a&gt; (accounts) which also contain storage space on jalbum.net. Useful if you don&apos;t have your own site.&lt;/p&gt;
+&lt;p&gt;Download jAlbum &lt;a href=&quot;https://jalbum.net/software/download&quot; target=&quot;_blank&quot;&gt;from here&lt;/a&gt;. Read our tutorials &lt;a href=&quot;https://jalbum.net/help/en/Tutorials&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</string>
+  </void>
+  <void method="put">
+   <string>title</string>
+   <string>About jAlbum</string>
+  </void>
+  <void method="put">
+   <string>aboutHeader</string>
+   <string>About jAlbum</string>
+  </void>
+ </object>
+</java>
