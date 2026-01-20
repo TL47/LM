@@ -25,6 +25,7 @@ menu a {
 }
 
 .seccion {
+    border-radius: 10px;
     float: left;
     width: 47vw;
     height: 45vh;
@@ -32,7 +33,7 @@ menu a {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 0px 15px rgba(0,0,0,0.8);
+    box-shadow: 0px 0px 15px rgba(170, 169, 169, 0.8);
 }
 
 .azul { 
