@@ -56,3 +56,8 @@ tfoot {
     color: purple;
     background-color: #f1ddc4;
 }
+
+.fondoAzul:hover {
+    background-color: #4c5f83;
+    transition: 0.5s;
+}
