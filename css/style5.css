@@ -1,0 +1,58 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+img {
+    width: 120px;
+    height: 60px;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+thead {
+    background-color: #fff7ed;
+}
+
+p {
+    padding-right: 10px;
+}
+
+.azul {
+    color: blue;
+    padding-left: 10px;
+    font-size: 22px;
+}
+
+.fondoAzul {
+    background-color: #eef4ff;
+}
+
+.derecha {
+    text-align: center;
+    padding-left: 40px;
+}
+
+.negro {
+    text-align: center;
+    font-size: 15px;
+}
+
+.azulCentro {
+    color: blue;
+    padding-left: 10px;
+    text-align: center;
+    font-size: 22px;
+}
+
+tfoot {
+    text-align: center;
+    color: purple;
+    background-color: #f1ddc4;
+}
