@@ -1,0 +1,15 @@
+* {
+    color: white;
+}
+
+.row {
+    text-align: center;
+}
+
+.igual {
+    height: 10vh;
+}
+
+.grande {
+    height: 60vh;
+}
