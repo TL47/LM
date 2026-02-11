@@ -1,0 +1,15 @@
+* {
+    color: white;
+}
+
+.row {
+    text-align: center;
+}
+
+.pequeño {
+    height: 5vh;
+}
+
+.igual {
+    height: 90vh;
+}
