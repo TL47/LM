@@ -1,0 +1,41 @@
+# This file is created by jAlbum. It sets custom file filtering and ordering for this image directory.
+# Files not listed here are added to the end of the album
+# Rows beginning with "-" indicate excluded files.
+# Rows can have up to 3 tab separated columns according to this scheme:
+# File name | Target path (for links) | When added (seconds since epoch)
+# Note: The target path can reference files and directories in other locations and thereby
+# allows you to compile albums consisting of files from several different locations.
+
+-jAlbum-banner.jpg		1594821413
+Dor.png		1594821413
+Chapter01.htt		1594726537
+benjamin-combs.jpg		1624438120
+niclas-moser.jpg		1624438120
+fidel-fernando.jpg		1624438120
+taisiia-shestopal.jpg		1624438120
+jakob-owens.jpg		1624438120
+matthias-blonski.jpg		1624438120
+suganth.jpg		1624438120
+Chapter02.htt		1594729012
+Dogs		1594729012
+Cats		1594729012
+Chapter03.htt		1594729946
+jalbum.net.webloc		1594731078
+About.htt	$SKIN_TEMPLATES_DIR\About.htt	1624464129
+Contact.htt	$SKIN_TEMPLATES_DIR\Contact.htt	1624464129
+res		1624528508
+benjamin-combs.jpg		1624438120
+Cats		1594729012
+Chapter01.htt		1594726537
+Chapter02.htt		1594729012
+Chapter03.htt		1594729946
+Dogs		1594729012
+Dor.png		1594821413
+fidel-fernando.jpg		1624438120
+jakob-owens.jpg		1624438120
+-jAlbum-banner.jpg		1594821413
+jalbum.net.webloc		1594731078
+matthias-blonski.jpg		1624438120
+niclas-moser.jpg		1624438120
+suganth.jpg		1624438120
+taisiia-shestopal.jpg		1624438120

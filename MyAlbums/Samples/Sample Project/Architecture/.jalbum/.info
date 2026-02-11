@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="19" class="java.beans.XMLDecoder">
+ <object class="java.util.HashMap">
+  <void method="put">
+   <string>lastFolderThumbCrop</string>
+   <boolean>true</boolean>
+  </void>
+  <void method="put">
+   <string>lastFolderThumbPath</string>
+   <string>Architecture/arnt-oberschmidt.jpg</string>
+  </void>
+  <void method="put">
+   <string>folderThumbSettingsHash</string>
+   <string>3129573edc7cc2b87274f4a3cef9f726</string>
+  </void>
+  <void method="put">
+   <string>lastFolderImageSize</string>
+   <string>1880x360</string>
+  </void>
+  <void method="put">
+   <string>lastFolderThumbSize</string>
+   <string>620x465</string>
+  </void>
+  <void method="put">
+   <string>firstCameraDate</string>
+   <long>1624448476000</long>
+  </void>
+  <void method="put">
+   <string>cameraDatesUpdatedDate</string>
+   <long>1701357846751</long>
+  </void>
+  <void method="put">
+   <string>themeImagePath</string>
+   <object class="se.datadosen.jalbum.AlbumObjectProperties$HiddenProperty">
+    <void property="property">
+     <string>lubo-minar.jpg</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>lastFolderImagePath</string>
+   <string>Architecture/lubo-minar.jpg</string>
+  </void>
+  <void method="put">
+   <string>lastFolderThumbName</string>
+   <string>Architecture_arnt-oberschmidt.jpg</string>
+  </void>
+  <void method="put">
+   <string>lastCameraDate</string>
+   <long>1624508162000</long>
+  </void>
+  <void method="put">
+   <string>lastFolderThumbDims</string>
+   <string>620x465</string>
+  </void>
+ </object>
+</java>

@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 6rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(https://static.barcelo.com/content/dam/bpt/posts/2023/5/parques%20nacionales%20de%20espa%C3%B1a.jpg);
+}
+
+header img {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+div {
+    background-color: white;
+}
+
+ol {
+    list-style-type: none;
+    padding-inline-start: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: solid 2px;
+}
+
+.buscadores {
+    width: 10rem;
+    margin-left: 15px;
+    border: solid 1px;
+}
+
+.buscadores li {
+    margin-block-start: 5px;
+}
+
+.izq {
+    width: 22%;
+    vertical-align: top; 
+    height: calc(100vh - 6rem);
+    background-color: rgb(160, 184, 211);
+    border-right: solid 2px;
+    padding-left: 5px;
+}
+
+.der {
+    width: 78%;
+    vertical-align: top;
+    height: auto;
+    background-color: rgb(200, 232, 250);
+    padding: 10px;
+}
+
+.parques li {
+    margin-block-start: 3px;
+}
+
+.parques {
+    margin-left: 15px;
+    width: 12rem;
+    border: solid 1px;
+}
+
+
+.contenido-parque {
+    display: none;
+}
+
+.contenido-parque:target {
+    display: block;
+}
+
+.contenido-parque:target .contenido {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.imagen {
+    width: 40%;
+    height: auto;
+    margin: 0;
+    flex-shrink: 0;
+}

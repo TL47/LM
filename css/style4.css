@@ -1,0 +1,58 @@
+body {
+    background-color: black;
+}
+
+iframe {
+    width: 96%;
+    height: 96%;
+}
+
+menu {
+    border: 5px solid rgb(124, 124, 12);
+    border-radius: 4px;
+    box-shadow: 4px -6px 3px rgb(80, 80, 7);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-inline-start: 0;
+    background-color: rgb(255, 255, 122);
+}
+
+menu a {
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.seccion {
+    border-radius: 10px;
+    float: left;
+    width: 47vw;
+    height: 45vh;
+    margin: 0.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 15px rgba(170, 169, 169, 0.8);
+}
+
+.azul { 
+    background-color: blue; 
+    border: 5px solid #0055ff;
+}
+
+.rojo { 
+    background-color: red; 
+    border: 5px solid #990000;
+}
+
+.amarillo { 
+    background-color: yellow; 
+    border: 5px solid #cccc00;
+    flex-direction: column;
+}
+
+.verde { 
+    background-color: green; 
+    border: 5px solid #006400;
+}

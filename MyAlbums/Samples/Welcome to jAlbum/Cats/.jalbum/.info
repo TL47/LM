@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="19" class="java.beans.XMLDecoder">
+ <object class="java.util.HashMap">
+  <void method="put">
+   <string>lastFolderThumbCrop</string>
+   <boolean>true</boolean>
+  </void>
+  <void method="put">
+   <string>lastFolderThumbPath</string>
+   <string>Cats/karina-vorozheeva.jpg</string>
+  </void>
+  <void method="put">
+   <string>lastFolderImageSize</string>
+   <string>1920x1200</string>
+  </void>
+  <void method="put">
+   <string>lastFolderThumbSize</string>
+   <string>600x420</string>
+  </void>
+  <void method="put">
+   <string>firstCameraDate</string>
+   <long>1701361800000</long>
+  </void>
+  <void method="put">
+   <string>cameraDatesUpdatedDate</string>
+   <long>1701380272458</long>
+  </void>
+  <void method="put">
+   <string>themeImagePath</string>
+   <object class="se.datadosen.jalbum.AlbumObjectProperties$HiddenProperty">
+    <void property="property">
+     <string>bogdan-farca.jpg</string>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>lastFolderImagePath</string>
+   <string>Cats/bogdan-farca.jpg</string>
+  </void>
+  <void method="put">
+   <string>lastFolderThumbName</string>
+   <string>Cats_karina-vorozheeva.jpg</string>
+  </void>
+  <void method="put">
+   <string>lastCameraDate</string>
+   <long>1701361801000</long>
+  </void>
+  <void method="put">
+   <string>lastFolderThumbDims</string>
+   <string>600x420</string>
+  </void>
+ </object>
+</java>

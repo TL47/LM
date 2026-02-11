@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="19" class="java.beans.XMLDecoder">
+ <object class="java.util.HashMap">
+  <void method="put">
+   <string>imageURI</string>
+   <string>http://jalbum.net/img/jalbum-sample.jpg</string>
+  </void>
+  <void method="put">
+   <string>lastFolderThumbCrop</string>
+   <boolean>true</boolean>
+  </void>
+  <void method="put">
+   <string>lastFolderThumbName</string>
+   <string>jalbum.net.jpg</string>
+  </void>
+  <void method="put">
+   <string>title</string>
+   <string>jAlbum</string>
+  </void>
+  <void method="put">
+   <string>lastFolderThumbDims</string>
+   <string>600x420</string>
+  </void>
+ </object>
+</java>

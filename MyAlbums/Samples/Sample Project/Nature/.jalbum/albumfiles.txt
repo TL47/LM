@@ -1,0 +1,24 @@
+# This file is created by jAlbum. It sets custom file filtering and ordering for this image directory.
+# Files not listed here are added to the end of the album
+# Rows beginning with "-" indicate excluded files.
+# Rows can have up to 3 tab separated columns according to this scheme:
+# File name | Target path (for links) | When added (seconds since epoch)
+# Note: The target path can reference files and directories in other locations and thereby
+# allows you to compile albums consisting of files from several different locations.
+
+diana-parkhouse.jpg		1600257813
+caitlin-wynne.jpg		1624446909
+finding-dan-dan-grinwis.jpg		1624446909
+jack-anstey.jpg		1624446909
+sterlinglanier-lanier.jpg		1624446909
+dan-cutler.jpg		1600257813
+denys-nevozhai.jpg		1624446909
+stephanie-leblanc.jpg		1624446909
+joyce-g.jpg		1600257813
+anna-anikina.jpg		1624446909
+-sylvain-guiheneuc.jpg		1624446909
+martina-misar-tummeltshammer.jpg		1624446909
+diana-parkhouse-1.jpg		1624446909
+diana-parkhouse-2.jpg		1624446909
+claudio-testa.jpg		1624446909
+qingbao-meng.jpg		1624446909
