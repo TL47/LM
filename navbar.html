@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar con Submenú - Bootstrap 5</title>
+    <!-- CSS de Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    <style>
+        /* CSS para habilitar el submenú lateral */
+        .dropdown-submenu {
+            position: relative;
+        }
+
+        .dropdown-submenu .dropdown-menu {
+            top: 0;
+            left: 100%;
+            margin-top: -1px;
+        }
+
+        /* Mostrar submenú al pasar el ratón (opcional) */
+        .dropdown-submenu:hover > .dropdown-menu {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    1. El papel de las clases de Bootstrap
+        collapse: Esta clase indica que el elemento está oculto por defecto en pantallas pequeñas. Es como decirle al navegador: "Mantén este menú cerrado hasta que yo te diga lo contrario".
+        navbar-collapse: Es una clase específica de Bootstrap que le dice al contenedor que se comporte como un menú de navegación. Permite que los elementos internos (los enlaces) se apilen verticalmente en móviles y se alineen horizontalmente en ordenadores.
+    2. El atributo id="navbarNav"
+        La "Matrícula" del elemento: Este es un identificador único. Es vital porque el botón de "hamburguesa" (el que aparece en el móvil) necesita saber exactamente a quién debe abrir.
+        La conexión: Si te fijas en el botón de la navbar (navbar-toggler), verás que tiene un atributo llamado data-bs-target="#navbarNav". El ID sirve para "conectar" el botón con este contenedor.
+    3. El funcionamiento responsive (Lógica de Bootstrap)
+        Aunque la clase collapse lo oculta, Bootstrap utiliza una "regla mágica" en combinación con la etiqueta padre <nav>:
+        En pantallas grandes (navbar-expand-lg): Bootstrap anula automáticamente la clase collapse y muestra el menú extendido.
+        En pantallas pequeñas (móviles/tablets): Bootstrap respeta la clase collapse. El menú desaparece y solo se puede ver si el usuario pulsa el botón de tres rayas (hamburguesa).
+
+    -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Mi App</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Secciones</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item nav-link-custom" href="#" data-section="web">Diseño Web</a></li>
+                            
+                            <!-- INICIO SUBMENÚ MARKETING -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Marketing</a>
+                                <ul class="dropdown-menu">
+                                    <!-- Aquí está la opción Mercados que carga el contenido -->
+                                    <li><a class="dropdown-item nav-link-custom" href="#" data-section="mkt">Mercados</a></li>
+                                </ul>
+                            </li>
+                            <!-- FIN SUBMENÚ MARKETING -->
+                            
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Carga</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#" id="btn-fetch-hola">elemento1 (Fetch Hola)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div id="content-area" class="p-5 border rounded bg-light shadow-sm">
+            <h2>Panel Principal</h2>
+            <p>Navega hasta Secciones -> Marketing -> Mercados.</p>
+        </div>
+    </div>
+
+    <!-- JS de Bootstrap 5.3 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script>
+        const zonaDestino = document.getElementById('content-area');
+
+        // Contenidos internos
+        const contenidos = {
+            'web': '<h2>Sección Web</h2><p>bienvenido a la sección sobre WEB</p>',
+            'mkt': '<h2>Marketing: Mercados</h2><p>Has accedido a la información de Marketing a través del submenú Mercados.</p>'
+        };
+
+        // Lógica para todos los enlaces con clase .nav-link-custom
+        /*
+        1. document.querySelectorAll('.nav-link-custom')
+           Qué hace: Busca en todo el documento HTML todos los elementos que tengan la clase CSS nav-link-custom.
+           Resultado: Devuelve una lista (un NodeList) con todos esos enlaces. No importa si están en el menú principal o en el submenú; si tienen esa clase, los encontrará.
+        2. .forEach(enlace => { ... })
+            Qué hace: Como tenemos varios enlaces, recorremos la lista uno por uno.
+            Analogía: Es como decirle a cada botón de una fila: "Tú, escucha lo siguiente; tú también; y tú también".
+        3. enlace.addEventListener('click', function(e) { ... })
+            Qué hace: Es el "oyente" de eventos. Se queda esperando a que el usuario haga clic en ese enlace específico.
+            El parámetro e: Representa el evento del clic. Contiene mucha información (dónde se hizo clic, qué tecla se pulsó, etc.).
+        4. e.preventDefault()
+             Por qué es vital: Por defecto, un enlace <a> intenta navegar a una URL o recargar la página. Como estamos haciendo una SPA (Single Page Application), queremos que JavaScript maneje el cambio, no el navegador. Esta línea "frena" el comportamiento natural del enlace.
+        5. e.stopPropagation()
+          Efecto en los menús: En Bootstrap, cuando haces clic en un elemento dentro de un menú desplegable, el evento "sube" por el árbol HTML y el menú se cierra automáticamente.
+          Uso aquí: Al añadir esto, evitamos que el clic "moleste" a los elementos superiores, lo que ayuda a controlar mejor el comportamiento de los submenús anidados.
+        6. const seccion = this.getAttribute('data-section')
+             Extracción de datos: Aquí es donde leemos el atributo que inventamos en el HTML (data-section="web", data-section="mkt", etc.).
+            this: Se refiere al enlace concreto al que se le hizo clic.
+        7. if (contenidos[seccion]) { zonaDestino.innerHTML = ... }
+            Inyección de contenido:
+            Mira si en nuestro objeto contenidos existe la "llave" que acabamos de leer (ej. ¿Existe 'web'?).
+            Si existe, accede al texto HTML guardado y lo mete dentro del div principal (#content-area) usando innerHTML.
+        En resumen:
+            El alumno pulsa en "Mercados".
+            El script detecta el clic y lee que su data-section es "mkt".
+            El script va al objeto contenidos y busca qué texto hay en la casilla "mkt".
+            El script borra lo que había en la pantalla y escribe ese nuevo texto. Todo en milisegundos y sin recargar la web.
+        */
+        document.querySelectorAll('.nav-link-custom').forEach(enlace => {
+            enlace.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation(); // Evita que el menú se cierre de golpe en algunos navegadores
+                
+                const seccion = this.getAttribute('data-section');
+                if (contenidos[seccion]) {
+                    zonaDestino.innerHTML = contenidos[seccion];
+                }
+            });
+        });
+
+        // Lógica Fetch
+        /*
+        Este bloque de código nos introduce en el mundo de las peticiones asíncronas. Mientras que el código anterior usaba datos guardados en una variable (memoria), este va a buscar un archivo externo al servidor.
+        Aquí tienes la explicación paso a paso:
+            1. document.getElementById('btn-fetch-hola')
+                Qué hace: Busca en el HTML el elemento específico que tiene el id="btn-fetch-hola".
+                Objetivo: "Estamos seleccionando el botón único que tiene el encargo de traer el archivo externo".
+            2. .addEventListener('click', function(e) { ... })
+                Qué hace: Escucha el clic del usuario. El parámetro (e) es el evento, y e.preventDefault() evita que el enlace intente navegar a otra página (comportamiento por defecto del navegador).
+            3. fetch('hola.html')
+                El concepto clave: fetch es una función moderna de JS para realizar peticiones HTTP.
+                Objetivo: Es como enviar a un "mensajero" a la carpeta del servidor a buscar un sobre llamado hola.html. El mensajero sale, pero no bloquea la página mientras vuelve; la web sigue funcionando.
+            4. .then(response => response.text())
+                Las Promesas: fetch devuelve una "Promesa". Esta línea dice: "CUANDO llegue el mensajero con el sobre, extrae solo el texto (el código HTML) que hay dentro".
+                Nota técnica: Aquí convertimos la respuesta cruda del servidor en un formato que JavaScript pueda leer (texto/HTML).
+            5. .then(data => { zonaDestino.innerHTML = data; })
+                La entrega: Una vez que tenemos el texto (guardado en la variable data), lo inyectamos directamente en el div central.
+                Resultado: El contenido del archivo hola.html aparece en la pantalla del usuario como si siempre hubiera estado ahí.
+            6. .catch(error => { ... })
+                Gestión de errores: Si el archivo no existe (error 404) o el servidor falla, el "mensajero" no puede completar la tarea.
+                Seguridad: En lugar de que la web se quede colgada o no haga nada, este bloque captura el fallo y muestra un mensaje visual rojo (alert-danger) avisando al usuario de que algo ha ido mal.
+💡      Diferencia clave con lo anterior:
+            Lógica anterior (contenidos['web']): Los datos ya están cargados en el código. Es instantáneo pero gasta memoria si el texto es gigante.
+            Lógica Fetch: El contenido solo se descarga si el usuario lo pide. Es más eficiente para páginas con mucho contenido o datos que cambian frecuentemente en el servidor.
+        Importante: fetch requiere un servidor local (como Live Server) porque los navegadores bloquean por seguridad estas peticiones si abres el archivo directamente con doble clic (file://).
+        */
+        document.getElementById('btn-fetch-hola').addEventListener('click', function(e) {
+            e.preventDefault();
+            fetch('hola.html')
+                .then(response => response.text())
+                .then(data => { zonaDestino.innerHTML = data; })
+                .catch(error => {
+                    zonaDestino.innerHTML = `<div class="alert alert-danger">Error de carga (Fetch).</div>`;
+                });
+        });
+    </script>
+</body>
+</html>
