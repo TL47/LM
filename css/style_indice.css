@@ -1,0 +1,194 @@
+body {
+    background-color: var(--bg-dark);
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(130, 170, 255, 0.05) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(199, 146, 234, 0.05) 0px, transparent 50%);
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--text-main);
+    min-height: 100vh;
+    margin: 0;
+}
+
+.custom-navbar {
+    background: linear-gradient(90deg, #141e30, #243b55);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #00d4ff !important;
+}
+
+.dropdown-menu {
+    border-radius: 10px;
+    border: none;
+    padding: 8px;
+}
+
+.dropdown-item {
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.dropdown-item:hover {
+    background-color: #2a5298;
+    color: white;
+}
+
+.content-box {
+    background-color: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    min-height: 75vh;
+}
+
+.title-main {
+    font-weight: bold;
+    color: #2a5298;
+}
+
+.subtitle-main {
+    color: #555;
+    font-size: 1rem;
+}
+
+#content-area {
+    margin-top: 20px;
+}
+
+/* Contenedor principal del panel */
+.panel-container {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 3rem;
+    transition: all 0.3s ease;
+}
+
+/* Definición de la animación de entrada */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* El contenedor principal con efecto de tarjeta moderna */
+.text-center.py-5 {
+    animation: fadeInUp 0.8s ease-out;
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 4rem !important;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de línea brillante arriba del contenedor */
+.text-center.py-5::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #007bff, #6610f2, #007bff);
+    background-size: 200% auto;
+    animation: gradientMove 3s linear infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+/* Importamos una fuente de consola para que parezca código real */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
+
+:root {
+    --primary-neon: #00ff41; /* Verde Matrix */
+    --secondary-neon: rgb(0, 81, 255);    /* Cian terminal */
+    --bg-dark: #0a0a0a;
+    --panel-bg: #121212;
+}
+
+/* El contenedor principal tipo terminal */
+.text-center.py-5 {
+    background-color: var(--panel-bg) !important;
+    border: 2px solid var(--primary-neon);
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+    font-family: 'Fira Code', monospace;
+    position: relative;
+    padding: 3rem !important;
+    overflow: hidden;
+}
+
+/* El efecto de "línea de escaneo" de los monitores antiguos */
+.text-center.py-5::after {
+    content: " ";
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), 
+                linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 2px, 3px 100%;
+    pointer-events: none;
+}
+
+/* Título con efecto Glitch */
+h2.panel {
+    color: var(--primary-neon);
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 2px 2px #6f00ff, -2px -2px #00ffff;
+    animation: glitch 3s infinite;
+}
+
+/* El párrafo como si fuera un comentario de código */
+h2.panel + p {
+    color: #888;
+    font-size: 1rem;
+}
+
+h2.panel + p::before {
+    content: "/* ";
+}
+
+h2.panel + p::after {
+    content: " */";
+}
+
+/* Animación Glitch para el título */
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+/* Animación de parpadeo para el cursor */
+h2.panel::after {
+    content: "_";
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
