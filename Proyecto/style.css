@@ -1,0 +1,66 @@
+body {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    margin: 30px;
+    background-color: #e8e2d0;
+    color: #2f2f2f;
+}
+
+h1 {
+    text-align: center;
+    color: #3e5f3e;
+    letter-spacing: 2px;
+}
+
+.button-container {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+button {
+    padding: 12px 22px;
+    margin: 6px;
+    cursor: pointer;
+    border: 2px solid #3e5f3e;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+    color: white;
+}
+
+.btn-puros {
+    background-color: #6d6d6d;
+}
+
+.btn-nueve {
+    background-color: #7b2d26;
+}
+
+.btn-murallas {
+    background-color: #4b5d67;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #f4efe2;
+    border: 2px solid #3e5f3e;
+}
+
+th, td {
+    padding: 14px;
+    border-bottom: 1px solid #cfc7b3;
+}
+
+th {
+    background-color: #3e5f3e;
+    color: white;
+}
+
+tr:hover {
+    background-color: #e3dcc8;
+}
