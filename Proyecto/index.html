@@ -1,69 +1,78 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 <body>
+    <div class="inicio">
+        
+    </div>
 
-<h1>Archivo de la Legión de Reconocimiento</h1>
+    <div class="xmlTitanes">
+        <h1>Archivo de la Legión de Reconocimiento</h1>
 
-<div class="button-container">
-  <button class="btn-puros" onclick="loadXMLDoc('titanesPuros')">Titanes Puros</button>
-  <button class="btn-nueve" onclick="loadXMLDoc('losNueveTitanes')">Los Nueve Titanes</button>
-  <button class="btn-murallas" onclick="loadXMLDoc('titanesMurallas')">Titanes de las Murallas</button>
-</div>
+        <div class="button-container">
+            <button class="btn-puros" onclick="loadXMLDoc('titanesPuros')">Titanes Puros</button>
+            <button class="btn-nueve" onclick="loadXMLDoc('losNueveTitanes')">Los Nueve Titanes</button>
+            <button class="btn-murallas" onclick="loadXMLDoc('titanesMurallas')">Titanes de las Murallas</button>
+        </div>
 
-<table id="demo">
-  </table>
+        <table id="demo">
+        </table>
 
-<script>
-function loadXMLDoc(categoria) {
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      renderTable(this, categoria);
-    }
-  };
-  xmlhttp.open("GET", "titanes.xml", true);
-  xmlhttp.send();
-}
+        <script>
+            function loadXMLDoc(categoria) {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        renderTable(this, categoria);
+                    }
+                };
+                xmlhttp.open("GET", "titanes.xml", true);
+                xmlhttp.send();
+            }
 
-function renderTable(xml, categoria) {
-  var xmlDoc = xml.responseXML;
-  var table = "<tr><th>Nombre</th><th>Información Detallada</th></tr>";
-  
-  var contenedorPrincipal = xmlDoc.getElementsByTagName(categoria)[0];
+            function renderTable(xml, categoria) {
+                var xmlDoc = xml.responseXML;
+                var table = "<tr><th>Nombre</th><th>Información Detallada</th></tr>";
+
+                var contenedorPrincipal = xmlDoc.getElementsByTagName(categoria)[0];
 
 
-  if(categoria == "titanesMurallas"){
-      var nombre = contenedorPrincipal.getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
-      var info = contenedorPrincipal.getElementsByTagName("caracteristicas")[0].childNodes[0].nodeValue;
+                if (categoria == "titanesMurallas") {
+                    var nombre = contenedorPrincipal.getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
+                    var info = contenedorPrincipal.getElementsByTagName("caracteristicas")[0].childNodes[0].nodeValue;
 
-      table += "<tr><td><strong>" + nombre + "</strong></td><td>" + info + "</td></tr>";
-  }
-  else{
-      var hijos = contenedorPrincipal.children;
+                    table += "<tr><td><strong>" + nombre + "</strong></td><td>" + info + "</td></tr>";
+                }
+                else {
+                    var hijos = contenedorPrincipal.children;
 
-      for (var i = 0; i < hijos.length; i++) {
-        var nodoActual = hijos[i];
+                    for (var i = 0; i < hijos.length; i++) {
+                        var nodoActual = hijos[i];
 
-        var nombreNode = nodoActual.getElementsByTagName("nombre")[0];
+                        var nombreNode = nodoActual.getElementsByTagName("nombre")[0];
 
-        var infoNode = nodoActual.getElementsByTagName("caracteristicas")[0] || 
-                       nodoActual.getElementsByTagName("habilidadPrincipal")[0];
+                        var infoNode = nodoActual.getElementsByTagName("caracteristicas")[0] ||
+                            nodoActual.getElementsByTagName("habilidadPrincipal")[0];
 
-        if (nombreNode && infoNode) {
-          table += "<tr><td><strong>" + 
-                   nombreNode.childNodes[0].nodeValue + 
-                   "</strong></td><td>" + 
-                   infoNode.childNodes[0].nodeValue + 
-                   "</td></tr>";
-        }
-      }
-  }
+                        if (nombreNode && infoNode) {
+                            table += "<tr><td><strong>" +
+                                nombreNode.childNodes[0].nodeValue +
+                                "</strong></td><td>" +
+                                infoNode.childNodes[0].nodeValue +
+                                "</td></tr>";
+                        }
+                    }
+                }
 
-  document.getElementById("demo").innerHTML = table;
-}
-</script>
-
+                document.getElementById("demo").innerHTML = table;
+            }
+        </script>
+    </div>
 </body>
 </html>
