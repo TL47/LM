@@ -1,78 +1,303 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archivo de la Legión de Reconocimiento</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="inicio">
-        
-    </div>
 
-    <div class="xmlTitanes">
-        <h1>Archivo de la Legión de Reconocimiento</h1>
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="fas fa-shield-alt me-2"></i>
+                LEGION DE RECONOCIMIENTO
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav ms-auto">
+                    <a class="nav-link active" href="#" onclick="showSection('inicio')"><i class="fas fa-home me-1"></i>Inicio</a>
+                    <a class="nav-link" href="#" onclick="showSection('titanes')"><i class="fas fa-skull me-1"></i>Titanes</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-        <div class="button-container">
-            <button class="btn-puros" onclick="loadXMLDoc('titanesPuros')">Titanes Puros</button>
-            <button class="btn-nueve" onclick="loadXMLDoc('losNueveTitanes')">Los Nueve Titanes</button>
-            <button class="btn-murallas" onclick="loadXMLDoc('titanesMurallas')">Titanes de las Murallas</button>
+    <div id="inicio" class="section-content container mt-5">
+        <div class="hero-section p-5 mb-4 rounded-3 position-relative overflow-hidden">
+            <div class="hero-overlay"></div>
+            <div class="position-relative">
+                <h1 class="display-4 fw-bold text-white mb-3">Shingeki no Kyojin Wiki</h1>
+                <p class="col-md-8 fs-5 text-white">Explora los secretos tras las murallas. La humanidad lucha por su supervivencia contra los titanes en un mundo donde el miedo es constante y la libertad es solo un recuerdo lejano.</p>
+                <div class="mt-4">
+                    <span class="badge bg-danger me-2">Drama</span>
+                    <span class="badge bg-dark me-2">Acción</span>
+                    <span class="badge bg-secondary">Fantasía Oscura</span>
+                </div>
+            </div>
         </div>
 
-        <table id="demo">
-        </table>
+        <div class="row mb-5">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-header bg-dark text-white">
+                        <h3 class="mb-0"><i class="fas fa-book-open me-2"></i>Historia de la Serie</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="lead">Hace un siglo, la humanidad fue llevada al borde de la extinción por la aparición repentina de los Titanes, gigantes humanoides que devoran a los seres humanos sin motivo aparente.</p>
+                        <p>Los supervivientes se refugiaron detrás de tres enormes murallas concéntricas: <strong>Maria</strong>, <strong>Rose</strong> y <strong>Sina</strong>. Durante cien años, hubo una paz relativa hasta que un titán colosal apareció de la nada y abrió una brecha en la Muralla Maria, permitiendo que los titanes invadieran el territorio humano.</p>
+                        <p>Eren Yeager, un joven que presenció la muerte de su madre a manos de un titán, jura vengarse y exterminar a todos los titanes. Junto a sus amigos de la infancia Mikasa Ackerman y Armin Arlert, se une a la Legión de Reconocimiento para luchar por la humanidad.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card border-danger mb-4">
+                    <div class="card-header bg-danger text-white">
+                        <h4 class="mb-0"><i class="fas fa-exclamation-triangle me-2"></i>Alerta de Titanes</h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-skull text-danger me-2"></i>Peligro Nivel: Máximo</li>
+                            <li class="mb-2"><i class="fas fa-shield-alt text-warning me-2"></i>Muralla Rose: Protegida</li>
+                            <li class="mb-2"><i class="fas fa-users text-info me-2"></i>Población: ~250,000</li>
+                            <li><i class="fas fa-crosshairs text-success me-2"></i>Legión Activa: Sí</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-army-green text-white">
+                        <h5 class="mb-0">Datos Clave</h5>
+                    </div>
+                    <div class="card-body">
+                        <small>
+                            <p><strong>Creador:</strong> Hajime Isayama</p>
+                            <p><strong>Años de publicación:</strong> 2009-2021</p>
+                            <p><strong>Capítulos:</strong> 139</p>
+                            <p><strong>Temporadas anime:</strong> 4</p>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        <script>
-            function loadXMLDoc(categoria) {
-                var xmlhttp = new XMLHttpRequest();
-                xmlhttp.onreadystatechange = function () {
-                    if (this.readyState == 4 && this.status == 200) {
-                        renderTable(this, categoria);
-                    }
-                };
-                xmlhttp.open("GET", "titanes.xml", true);
-                xmlhttp.send();
-            }
-
-            function renderTable(xml, categoria) {
-                var xmlDoc = xml.responseXML;
-                var table = "<tr><th>Nombre</th><th>Información Detallada</th></tr>";
-
-                var contenedorPrincipal = xmlDoc.getElementsByTagName(categoria)[0];
-
-
-                if (categoria == "titanesMurallas") {
-                    var nombre = contenedorPrincipal.getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
-                    var info = contenedorPrincipal.getElementsByTagName("caracteristicas")[0].childNodes[0].nodeValue;
-
-                    table += "<tr><td><strong>" + nombre + "</strong></td><td>" + info + "</td></tr>";
-                }
-                else {
-                    var hijos = contenedorPrincipal.children;
-
-                    for (var i = 0; i < hijos.length; i++) {
-                        var nodoActual = hijos[i];
-
-                        var nombreNode = nodoActual.getElementsByTagName("nombre")[0];
-
-                        var infoNode = nodoActual.getElementsByTagName("caracteristicas")[0] ||
-                            nodoActual.getElementsByTagName("habilidadPrincipal")[0];
-
-                        if (nombreNode && infoNode) {
-                            table += "<tr><td><strong>" +
-                                nombreNode.childNodes[0].nodeValue +
-                                "</strong></td><td>" +
-                                infoNode.childNodes[0].nodeValue +
-                                "</td></tr>";
-                        }
-                    }
-                }
-
-                document.getElementById("demo").innerHTML = table;
-            }
-        </script>
+        <h2 class="mb-4 text-center"><i class="fas fa-users me-2"></i>Personajes Principales</h2>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <div class="col">
+                <div class="card character-card h-100 shadow-sm">
+                    <div class="character-img-container">
+                        <!-- IMAGEN DEL PERSONAJE: Reemplazar el siguiente div con la etiqueta img -->
+                        <!-- Ejemplo: <img src="imagenes/eren_yeager.jpg" class="card-img-top" alt="Eren Yeager"> -->
+                        <img src="imagenes/eren.jpg" class="card-img-top" alt="Eren Yeager" style="height: 250px; object-fit: cover;">
+                        <div class="character-badge bg-danger">Protagonista</div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-blood fw-bold">Eren Yeager</h5>
+                        <p class="card-text small">Protagonista principal y poseedor del Titán de Ataque. Su determinación por la libertad impulsa toda la trama.</p>
+                        <div class="mt-2">
+                            <span class="badge bg-dark me-1">Titán de Ataque</span>
+                            <span class="badge bg-secondary">Legión</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card character-card h-100 shadow-sm">
+                    <div class="character-img-container">
+                        <img src="imagenes/mikasa.jpg" class="card-img-top" alt="Mikasa Ackerman" style="height: 250px; object-fit: cover;">
+                        <div class="character-badge bg-success">Guerrera Élite</div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-blood fw-bold">Mikasa Ackerman</h5>
+                        <p class="card-text small">Una de las guerreras más fuertes de la humanidad. Su lealtad hacia Eren es inquebrantable.</p>
+                        <div class="mt-2">
+                            <span class="badge bg-dark me-1">Ackerman</span>
+                            <span class="badge bg-secondary">Legión</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card character-card h-100 shadow-sm">
+                    <div class="character-img-container">
+                        
+                        <img src="imagenes/armin.jpg" class="card-img-top" alt="Armin Arlert" style="height: 250px; object-fit: cover;">
+                        <div class="character-badge bg-info">Estratega</div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-blood fw-bold">Armin Arlert</h5>
+                        <p class="card-text small">El estratega brillante de la Legión. Su inteligencia ha salvado a la humanidad en numerosas ocasiones.</p>
+                        <div class="mt-2">
+                            <span class="badge bg-dark me-1">Titán Colosal</span>
+                            <span class="badge bg-secondary">Legión</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card character-card h-100 shadow-sm">
+                    <div class="character-img-container">
+                        
+                        <img src="imagenes/levi.jpg" class="card-img-top" alt="Levi Ackerman" style="height: 250px; object-fit: cover;">
+                        <div class="character-badge bg-warning">Líder</div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title text-blood fw-bold">Levi Ackerman</h5>
+                        <p class="card-text small">Considerado el soldado más fuerte de la humanidad. Líder del escuadrón especial.</p>
+                        <div class="mt-2">
+                            <span class="badge bg-dark me-1">Ackerman</span>
+                            <span class="badge bg-secondary">Capitán</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <div id="titanes" class="section-content container mt-5 pt-5 pb-5" style="display: none;">
+        <hr class="border-blood">
+        <h2 class="text-center mb-4">Enciclopedia de Titanes</h2>
+        
+        <div class="button-container d-flex justify-content-center flex-wrap mb-5">
+            <button class="btn btn-scout m-2" onclick="loadXMLDoc('titanesPuros')">Titanes Puros</button>
+            <button class="btn btn-scout m-2" onclick="loadXMLDoc('losNueveTitanes')">Los Nueve Titanes</button>
+            <button class="btn btn-scout m-2" onclick="loadXMLDoc('titanesMurallas')">Titanes de las Murallas</button>
+        </div>
+
+        <div id="demo" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            </div>
+    </div>
+
+    <script>
+        // Función para mostrar/ocultar secciones
+        function showSection(sectionId) {
+            // Ocultar todas las secciones
+            const sections = document.querySelectorAll('.section-content');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Mostrar la sección seleccionada
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+            
+            // Actualizar el estado activo del menú
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Añadir clase active al enlace clicado
+            event.target.closest('.nav-link').classList.add('active');
+            
+            // Prevenir el comportamiento por defecto del enlace
+            event.preventDefault();
+        }
+
+        function loadXMLDoc(categoria) {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    renderCards(this, categoria);
+                }
+            };
+            xmlhttp.open("GET", "titanes.xml", true);
+            xmlhttp.send();
+        }
+
+        function renderCards(xml, categoria) {
+            var xmlDoc = xml.responseXML;
+            var htmlCards = "";
+            var contenedorPrincipal = xmlDoc.getElementsByTagName(categoria)[0];
+
+            if (categoria == "titanesMurallas") {
+                var nombre = contenedorPrincipal.getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
+                var info = contenedorPrincipal.getElementsByTagName("caracteristicas")[0].childNodes[0].nodeValue;
+                htmlCards += createCardTemplate(nombre, info);
+            } else {
+                var hijos = contenedorPrincipal.children;
+                for (var i = 0; i < hijos.length; i++) {
+                    var nodoActual = hijos[i];
+                    // Saltar nodos de texto como el título general de la categoría
+                    if(nodoActual.tagName === "nombre" && hijos.length > 1) continue; 
+
+                    var nombreNode = nodoActual.getElementsByTagName("nombre")[0];
+                    var infoNode = nodoActual.getElementsByTagName("caracteristicas")[0] ||
+                                   nodoActual.getElementsByTagName("habilidadPrincipal")[0];
+
+                    if (nombreNode && infoNode) {
+                        htmlCards += createCardTemplate(nombreNode.childNodes[0].nodeValue, infoNode.childNodes[0].nodeValue);
+                    }
+                }
+            }
+            document.getElementById("demo").innerHTML = htmlCards;
+        }
+
+        function createCardTemplate(titulo, contenido) {
+            const cardTypes = {
+                'titanesPuros': { icon: 'fa-skull', color: '#4b5d67', badge: 'Titán Puro', gradient: 'linear-gradient(135deg, #4b5d67, #393C41)' },
+                'losNueveTitanes': { icon: 'fa-crown', color: '#832D38', badge: 'Titán Cambiante', gradient: 'linear-gradient(135deg, #832D38, #294023)' },
+                'titanesMurallas': { icon: 'fa-shield-alt', color: '#294023', badge: 'Titán Muralla', gradient: 'linear-gradient(135deg, #294023, #832D38)' }
+            };
+            
+            // Determinar el tipo de tarjeta basado en el título
+            let cardType = cardTypes['titanesPuros'];
+            if (titulo.includes('Fundador') || titulo.includes('Ataque') || titulo.includes('Colosal') || 
+                titulo.includes('Acorazado') || titulo.includes('Hembra') || titulo.includes('Bestia') || 
+                titulo.includes('Mandíbula') || titulo.includes('Carguero') || titulo.includes('Martillo')) {
+                cardType = cardTypes['losNueveTitanes'];
+            } else if (titulo.includes('Murallas')) {
+                cardType = cardTypes['titanesMurallas'];
+            }
+            
+            // Mapeo de nombres de titanes a archivos de imagen
+            const titanImages = {
+                'Titanes comunes': 'titanesPuros.png',
+                'Titanes Excéntricos (Anormales)': 'titanesexcentricos.png',
+                'Titán Fundador': 'fundador.png',
+                'Titán de Ataque': 'titanataque.png',
+                'Titán Colosal': 'colosal.png',
+                'Titán Acorazado': 'acorazado.png',
+                'Titán Hembra': 'hembra.png',
+                'Titán Bestia': 'bestia.png',
+                'Titán Mandíbula': 'mandibul.png',
+                'Titán Carguero': 'carguero.png',
+                'Titán Martillo de Guerra': 'martillo.png',
+                'Titanes de las Murallas': 'titanmurallas.jpg'
+            };
+            
+            const imageName = titanImages[titulo] || 'titan_default.jpg';
+            
+            return `
+                <div class="col mb-4">
+                    <div class="card titan-card h-100 shadow-sm border-0">
+                        <div class="character-img-container">
+                            <img src="imagenes/${imageName}" class="card-img-top" alt="${titulo}">
+                            <div class="character-badge" style="background-color: ${cardType.color};">${cardType.badge}</div>
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title text-blood mb-3 fw-bold">${titulo}</h4>
+                            <p class="card-text">${contenido}</p>
+                            <div class="mt-3">
+                                <span class="badge bg-dark me-1"><i class="fas fa-exclamation-triangle me-1"></i>Peligroso</span>
+                                <span class="badge bg-secondary"><i class="fas fa-book me-1"></i>Archivo Clasificado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+    </script>
+
+    <footer class="text-center p-4 mt-5">
+        <p>© 2026 - Informe de la Legión de Reconocimiento | 1º DAM</p>
+    </footer>
 </body>
 </html>
