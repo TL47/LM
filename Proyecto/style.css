@@ -1,73 +1,3 @@
-/* body {
-    font-family: "Noto Serif", serif;
-    margin: 30px;
-    background-color: #e8e2d0;
-    color: #2f2f2f;
-}
-
-h1 {
-    text-align: center;
-    color: #294023;
-    letter-spacing: 2px;
-}
-
-.button-container {
-    text-align: center;
-    margin-bottom: 25px;
-}
-
-button {
-    padding: 12px 22px;
-    margin: 6px;
-    cursor: pointer;
-    border: 2px solid #294023;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: 0.3s;
-    color: white;
-}
-
-.btn-puros {
-    background-color: #4b5d67;
-    
-}
-
-.btn-nueve {
-    background-color: #4b5d67;
-}
-
-.btn-murallas {
-    background-color: #4b5d67;
-}
-
-button:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    background-color: #393C41;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #f4efe2;
-    border: 2px solid #294023;
-}
-
-th, td {
-    padding: 14px;
-    border-bottom: 1px solid #cfc7b3;
-}
-
-th {
-    background-color: #294023;
-    color: white;
-}
-
-tr:hover {
-    background-color: #e3dcc8;
-} */
-
-/* Paleta basada en tus capturas */
 :root {
     --dark-grey: #393C41;
     --army-green: #294023;
@@ -110,7 +40,7 @@ body {
     border-radius: 5px;
 }
 
-.hero-section {
+.portada {
     background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
                 linear-gradient(135deg, var(--army-green), var(--blood-red));
     background-size: cover;
@@ -121,7 +51,7 @@ body {
     height: 60vh;
 }
 
-.hero-section::before {
+.portada::before {
     content: '';
     position: absolute;
     top: 0;
@@ -132,7 +62,7 @@ body {
     animation: float 20s infinite ease-in-out;
 }
 
-.hero-overlay {
+.filtro {
     position: absolute;
     top: 0;
     left: 0;
@@ -152,7 +82,7 @@ body {
     50% { transform: translateY(-10px) rotate(2deg); }
 }
 
-.btn-scout {
+.btn-legion {
     background-color: var(--army-green);
     color: white;
     border: 2px solid var(--dark-grey);
@@ -165,7 +95,7 @@ body {
     letter-spacing: 1px;
 }
 
-.btn-scout::before {
+.btn-legion::before {
     content: '';
     position: absolute;
     top: 0;
@@ -176,11 +106,11 @@ body {
     transition: left 0.5s;
 }
 
-.btn-scout:hover::before {
+.btn-legion:hover::before {
     left: 100%;
 }
 
-.btn-scout:hover {
+.btn-legion:hover {
     background-color: var(--blood-red);
     color: white;
     transform: translateY(-3px);
@@ -188,7 +118,7 @@ body {
     border-color: var(--blood-red);
 }
 
-.character-card, .titan-card {
+.carta-pj, .carta-titan {
     background-color: var(--paper-white);
     border: 2px solid var(--tan-accent);
     transition: all 0.3s ease;
@@ -197,7 +127,7 @@ body {
     min-height: 400px;
 }
 
-.character-card::before, .titan-card::before {
+.carta-pj::before, .carta-titan::before {
     content: '';
     position: absolute;
     top: 0;
@@ -209,23 +139,23 @@ body {
     transition: opacity 0.3s;
 }
 
-.character-card:hover::before, .titan-card:hover::before {
+.carta-pj:hover::before, .carta-titan:hover::before {
     opacity: 1;
 }
 
-.character-card:hover {
+.carta-pj:hover {
     border-color: var(--blood-red);
     transform: translateY(-5px);
     box-shadow: 0 15px 35px rgba(131, 45, 56, 0.2);
 }
 
-.titan-card:hover {
+.carta-titan:hover {
     border-color: var(--blood-red);
     transform: translateY(-3px) scale(1.02);
     box-shadow: 0 10px 30px rgba(131, 45, 56, 0.3);
 }
 
-.titan-card .card-img-top {
+.carta-titan .card-img-top {
     width: 350px !important;
     height: 500px !important;
     object-fit: cover;
@@ -234,13 +164,14 @@ body {
     display: block;
 }
 
-.character-img-container {
+.caja-img {
     position: relative;
     overflow: hidden;
 }
 
-.character-badge {
+.chapa {
     position: absolute;
+    color: white;
     top: 10px;
     right: 10px;
     padding: 5px 10px;
@@ -252,12 +183,12 @@ body {
     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
-.text-blood {
+.txt-sangre {
     color: var(--blood-red);
     font-weight: bold;
 }
 
-.border-blood {
+.linea-sangre {
     border-top: 3px solid var(--blood-red);
     opacity: 1;
     background: linear-gradient(90deg, var(--blood-red), transparent);
@@ -273,7 +204,7 @@ footer {
     width: 100%;
 }
 
-.bg-army-green {
+.fondo-verde {
     background-color: var(--army-green) !important;
 }
 
@@ -283,6 +214,7 @@ footer {
 
 .card {
     transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease-out;
 }
 
 .card:hover {
@@ -306,25 +238,22 @@ footer {
     }
 }
 
-.card {
-    animation: fadeInUp 0.6s ease-out;
-}
-
 /* Efectos de scroll suave */
 html {
     scroll-behavior: smooth;
 }
 
-.section-content {
+.seccion {
     flex: 1;
     padding-bottom: 2rem;
 }
+
 @media (max-width: 768px) {
-    .hero-section {
+    .portada {
         border-left: 5px solid var(--blood-red);
     }
     
-    .btn-scout {
+    .btn-legion {
         padding: 10px 20px;
         font-size: 0.9rem;
     }

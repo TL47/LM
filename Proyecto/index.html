@@ -29,9 +29,9 @@
         </div>
     </nav>
 
-    <div id="inicio" class="section-content container mt-5">
-        <div class="hero-section p-5 mb-4 rounded-3 position-relative overflow-hidden" style="background-image: url('imagenes/imagen_portada3.jpg'); background-size: cover; background-position: center;">
-            <div class="hero-overlay"></div>
+    <div id="inicio" class="seccion container mt-5">
+        <div class="portada p-5 mb-4 rounded-3 position-relative overflow-hidden" style="background-image: url('imagenes/imagen_portada3.jpg'); background-size: cover; background-position: center;">
+            <div class="filtro"></div>
         </div>
 
         <div class="row mb-5">
@@ -62,7 +62,7 @@
                     </div>
                 </div>
                 <div class="card border-0 shadow-sm">
-                    <div class="card-header bg-army-green text-white">
+                    <div class="card-header fondo-verde text-white">
                         <h5 class="mb-0">Datos Clave</h5>
                     </div>
                     <div class="card-body">
@@ -80,13 +80,13 @@
         <h2 class="mb-4 text-center"><i class="fas fa-users me-2"></i>Personajes Principales</h2>
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
             <div class="col">
-                <div class="card character-card h-100 shadow-sm">
-                    <div class="character-img-container">
+                <div class="card carta-pj h-100 shadow-sm">
+                    <div class="caja-img">
                         <img src="imagenes/eren.jpg" class="card-img-top" alt="Eren Yeager" style="height: 250px; object-fit: cover;">
-                        <div class="character-badge bg-danger">Protagonista</div>
+                        <div class="chapa bg-danger">Protagonista</div>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title text-blood fw-bold">Eren Yeager</h5>
+                        <h5 class="card-title txt-sangre fw-bold">Eren Yeager</h5>
                         <p class="card-text small">Protagonista principal y poseedor del Titán de Ataque. Su determinación por la libertad impulsa toda la trama.</p>
                         <div class="mt-2">
                             <span class="badge bg-dark me-1">Titán de Ataque</span>
@@ -96,13 +96,13 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card character-card h-100 shadow-sm">
-                    <div class="character-img-container">
+                <div class="card carta-pj h-100 shadow-sm">
+                    <div class="caja-img">
                         <img src="imagenes/mikasa.jpg" class="card-img-top" alt="Mikasa Ackerman" style="height: 250px; object-fit: cover;">
-                        <div class="character-badge bg-success">Guerrera Élite</div>
+                        <div class="chapa bg-success">Guerrera Élite</div>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title text-blood fw-bold">Mikasa Ackerman</h5>
+                        <h5 class="card-title txt-sangre fw-bold">Mikasa Ackerman</h5>
                         <p class="card-text small">Una de las guerreras más fuertes de la humanidad. Su lealtad hacia Eren es inquebrantable.</p>
                         <div class="mt-2">
                             <span class="badge bg-dark me-1">Ackerman</span>
@@ -112,14 +112,14 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card character-card h-100 shadow-sm">
-                    <div class="character-img-container">
+                <div class="card carta-pj h-100 shadow-sm">
+                    <div class="caja-img">
                         
                         <img src="imagenes/armin.jpg" class="card-img-top" alt="Armin Arlert" style="height: 250px; object-fit: cover;">
-                        <div class="character-badge bg-info">Estratega</div>
+                        <div class="chapa bg-info">Estratega</div>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title text-blood fw-bold">Armin Arlert</h5>
+                        <h5 class="card-title txt-sangre fw-bold">Armin Arlert</h5>
                         <p class="card-text small">El estratega brillante de la Legión. Su inteligencia ha salvado a la humanidad en numerosas ocasiones.</p>
                         <div class="mt-2">
                             <span class="badge bg-dark me-1">Titán Colosal</span>
@@ -129,14 +129,14 @@
                 </div>
             </div>
             <div class="col">
-                <div class="card character-card h-100 shadow-sm">
-                    <div class="character-img-container">
+                <div class="card carta-pj h-100 shadow-sm">
+                    <div class="caja-img">
                         
                         <img src="imagenes/levi.jpg" class="card-img-top" alt="Levi Ackerman" style="height: 250px; object-fit: cover;">
-                        <div class="character-badge bg-warning">Líder</div>
+                        <div class="chapa bg-warning">Líder</div>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title text-blood fw-bold">Levi Ackerman</h5>
+                        <h5 class="card-title txt-sangre fw-bold">Levi Ackerman</h5>
                         <p class="card-text small">Considerado el soldado más fuerte de la humanidad. Líder del escuadrón especial.</p>
                         <div class="mt-2">
                             <span class="badge bg-dark me-1">Ackerman</span>
@@ -148,14 +148,14 @@
         </div>
     </div>
 
-    <div id="titanes" class="section-content container mt-5 pt-5 pb-5" style="display: none;">
-        <hr class="border-blood">
+    <div id="titanes" class="seccion container mt-5 pt-5 pb-5" style="display: none;">
+        <hr class="linea-sangre">
         <h2 class="text-center mb-4">Enciclopedia de Titanes</h2>
         
         <div class="button-container d-flex justify-content-center flex-wrap mb-5">
-            <button class="btn btn-scout m-2" onclick="loadXMLDoc('titanesPuros')">Titanes Puros</button>
-            <button class="btn btn-scout m-2" onclick="loadXMLDoc('losNueveTitanes')">Los Nueve Titanes</button>
-            <button class="btn btn-scout m-2" onclick="loadXMLDoc('titanesMurallas')">Titanes de las Murallas</button>
+            <button class="btn btn-legion m-2" onclick="loadXMLDoc('titanesPuros')">Titanes Puros</button>
+            <button class="btn btn-legion m-2" onclick="loadXMLDoc('losNueveTitanes')">Los Nueve Titanes</button>
+            <button class="btn btn-legion m-2" onclick="loadXMLDoc('titanesMurallas')">Titanes de las Murallas</button>
         </div>
 
         <div id="demo" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
@@ -163,30 +163,24 @@
     </div>
 
     <script>
-        // Función para mostrar/ocultar secciones
         function showSection(sectionId) {
-            // Ocultar todas las secciones
-            const sections = document.querySelectorAll('.section-content');
+            const sections = document.querySelectorAll('.seccion');
             sections.forEach(section => {
                 section.style.display = 'none';
             });
             
-            // Mostrar la sección seleccionada
             const selectedSection = document.getElementById(sectionId);
             if (selectedSection) {
                 selectedSection.style.display = 'block';
             }
             
-            // Actualizar el estado activo del menú
             const navLinks = document.querySelectorAll('.nav-link');
             navLinks.forEach(link => {
                 link.classList.remove('active');
             });
             
-            // Añadir clase active al enlace clicado
             event.target.closest('.nav-link').classList.add('active');
             
-            // Prevenir el comportamiento por defecto del enlace
             event.preventDefault();
         }
 
@@ -214,7 +208,6 @@
                 var hijos = contenedorPrincipal.children;
                 for (var i = 0; i < hijos.length; i++) {
                     var nodoActual = hijos[i];
-                    // Saltar nodos de texto como el título general de la categoría
                     if(nodoActual.tagName === "nombre" && hijos.length > 1) continue; 
 
                     var nombreNode = nodoActual.getElementsByTagName("nombre")[0];
@@ -236,7 +229,6 @@
                 'titanesMurallas': { icon: 'fa-shield-alt', color: '#294023', badge: 'Titán Muralla', gradient: 'linear-gradient(135deg, #294023, #832D38)' }
             };
             
-            // Determinar el tipo de tarjeta basado en el título
             let cardType = cardTypes['titanesPuros'];
             if (titulo.includes('Fundador') || titulo.includes('Ataque') || titulo.includes('Colosal') || 
                 titulo.includes('Acorazado') || titulo.includes('Hembra') || titulo.includes('Bestia') || 
@@ -246,7 +238,6 @@
                 cardType = cardTypes['titanesMurallas'];
             }
             
-            // Mapeo de nombres de titanes a archivos de imagen
             const titanImages = {
                 'Titanes comunes': 'titanesPuros.png',
                 'Titanes Excéntricos (Anormales)': 'titanesexcentricos.png',
@@ -266,13 +257,13 @@
             
             return `
                 <div class="col mb-4">
-                    <div class="card titan-card h-100 shadow-sm border-0">
-                        <div class="character-img-container">
+                    <div class="card carta-titan h-100 shadow-sm border-0">
+                        <div class="caja-img">
                             <img src="imagenes/${imageName}" class="card-img-top" alt="${titulo}">
-                            <div class="character-badge" style="background-color: ${cardType.color};">${cardType.badge}</div>
+                            <div class="chapa" style="background-color: ${cardType.color};">${cardType.badge}</div>
                         </div>
                         <div class="card-body">
-                            <h4 class="card-title text-blood mb-3 fw-bold">${titulo}</h4>
+                            <h4 class="card-title txt-sangre mb-3 fw-bold">${titulo}</h4>
                             <p class="card-text">${contenido}</p>
                             <div class="mt-3">
                                 <span class="badge bg-dark me-1"><i class="fas fa-exclamation-triangle me-1"></i>Peligroso</span>
