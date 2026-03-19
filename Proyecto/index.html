@@ -24,6 +24,7 @@
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link active" href="#" onclick="showSection('inicio')"><i class="fas fa-home me-1"></i>Inicio</a>
                     <a class="nav-link" href="#" onclick="showSection('titanes')"><i class="fas fa-skull me-1"></i>Titanes</a>
+                    <a class="nav-link" href="#" onclick="showSection('facciones')"><i class="fas fa-shield-alt me-1"></i>Facciones</a>
                 </div>
             </div>
         </div>
@@ -162,6 +163,72 @@
             </div>
     </div>
 
+    <div id="facciones" class="seccion container mt-5 pt-5 pb-5" style="display: none;">
+        <hr class="linea-sangre">
+        <h2 class="text-center mb-4">Las Tres Facciones</h2>
+        
+        <div class="row mb-4">
+            <div class="col-md-4 text-center mb-3">
+                <div class="position-relative d-inline-block">
+                    <img src="imagenes/exploracion.png" class="img-fluid mb-3" alt="Escudo Exploración" style="max-height: 150px;">
+                    <h5 class="txt-sangre">Legión de Reconocimiento</h5>
+                    <p class="small">Los exploradores valientes que se aventuran fuera de las murallas para recuperar territorio y descubrir la verdad sobre el mundo y los titanes.</p>
+                    <button class="btn btn-legion btn-sm mt-2" onclick="elegirFaccionDirecto('exploracion')">Elegir</button>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-3">
+                <div class="position-relative d-inline-block">
+                    <img src="imagenes/guarnicion.png" class="img-fluid mb-3" alt="Escudo Guarnición" style="max-height: 150px;">
+                    <h5 class="txt-sangre">Tropa de Guarnición</h5>
+                    <p class="small">Los soldados que protegen las murallas y mantienen el orden dentro de los distritos, asegurando la supervivencia de la humanidad.</p>
+                    <button class="btn btn-legion btn-sm mt-2" onclick="elegirFaccionDirecto('guarnicion')">Elegir</button>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-3">
+                <div class="position-relative d-inline-block">
+                    <img src="imagenes/militar.png" class="img-fluid mb-3" alt="Escudo Policía Militar" style="max-height: 150px;">
+                    <h5 class="txt-sangre">Policía Militar</h5>
+                    <p class="small">La élite que mantiene el control interno y protege al rey, investigando amenazas dentro de las murallas.</p>
+                    <button class="btn btn-legion btn-sm mt-2" onclick="elegirFaccionDirecto('militar')">Elegir</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="button-container d-flex justify-content-center flex-wrap mb-5">
+            <button class="btn btn-legion m-2" onclick="iniciarTestFacciones()">Hacer Test de Facción</button>
+        </div>
+
+        <div id="resultado-test" class="text-center" style="display: none;">
+            <div class="card carta-titan h-100 shadow-sm border-0 mb-4">
+                <div class="card-body">
+                    <img id="escudo-resultado" src="" class="img-fluid mb-3" alt="Escudo Facción" style="max-height: 200px;">
+                    <h3 id="titulo-faccion" class="txt-sangre mb-3"></h3>
+                    <p id="descripcion-faccion" class="mb-3"></p>
+                    <h5 id="muralla-trabajo" class="txt-sangre"></h5>
+                </div>
+            </div>
+        </div>
+
+        <div id="test-container" class="card border-0 shadow-sm" style="display: none;">
+            <div class="card-header fondo-verde text-white">
+                <h4 class="mb-0">Test de Facción</h4>
+            </div>
+            <div class="card-body">
+                <div id="pregunta-test" class="mb-4">
+                    <h5 id="texto-pregunta"></h5>
+                </div>
+                <div class="button-container d-flex justify-content-center flex-wrap">
+                    <button class="btn btn-legion m-2" onclick="responderTest(0)"></button>
+                    <button class="btn btn-legion m-2" onclick="responderTest(1)"></button>
+                    <button class="btn btn-legion m-2" onclick="responderTest(2)"></button>
+                </div>
+                <div class="progress mt-3" style="height: 25px;">
+                    <div id="barra-progreso" class="progress-bar fondo-verde" role="progressbar" style="width: 0%; transition: width 0.3s;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script>
         function showSection(sectionId) {
             const sections = document.querySelectorAll('.seccion');
@@ -273,6 +340,98 @@
                     </div>
                 </div>
             `;
+        }
+        
+        function elegirFaccionDirecto(faccion) {
+        const facciones = {
+            'exploracion': {
+                nombre: 'Legión de Reconocimiento',
+                descripcion: 'Los exploradores valientes que se aventuran fuera de las murallas para recuperar territorio y descubrir la verdad sobre el mundo y los titanes.',
+                muralla: 'Trabajarías en la Muralla Rose, explorando tierras desconocidas y enfrentándote a titanes salvajes.',
+                escudo: 'imagenes/exploracion.png'
+            },
+            'guarnicion': {
+                nombre: 'Tropa de Guarnición',
+                descripcion: 'Los soldados que protegen las murallas y mantienen el orden dentro de los distritos, asegurando la supervivencia de la humanidad.',
+                muralla: 'Trabajarías en la Muralla Maria, defendiendo la primera línea de defensa contra los titanes.',
+                escudo: 'imagenes/guarnicion.png'
+            },
+            'militar': {
+                nombre: 'Policía Militar',
+                descripcion: 'La élite que mantiene el control interno y protege al rey, investigando amenazas dentro de las murallas.',
+                muralla: 'Trabajarías en el Distrito Interior, manteniendo la paz y protegiendo al gobierno.',
+                escudo: 'imagenes/militar.png'
+            }
+        };
+
+        const faccionElegida = facciones[faccion] || facciones['exploracion'];
+        
+        document.getElementById('escudo-resultado').src = faccionElegida.escudo;
+        document.getElementById('titulo-faccion').textContent = faccionElegida.nombre;
+        document.getElementById('descripcion-faccion').textContent = faccionElegida.descripcion;
+        document.getElementById('muralla-trabajo').textContent = faccionElegida.muralla;
+        
+        document.getElementById('resultado-test').style.display = 'block';
+        document.getElementById('test-container').style.display = 'none';
+    }
+
+        function iniciarTestFacciones() {
+            const testContainer = document.getElementById("test-container");
+            const preguntaTest = document.getElementById("texto-pregunta");
+            const barraProgreso = document.getElementById("barra-progreso");
+
+            testContainer.style.display = "block";
+
+            // Simulación de preguntas y respuestas
+            let preguntaActual = 0;
+            let respuestasCorrectas = 0;
+
+            function mostrarPregunta() {
+                switch (preguntaActual) {
+                    case 0:
+                        preguntaTest.textContent = "¿Qué es lo más importante para ti?";
+                        break;
+                    case 1:
+                        preguntaTest.textContent = "¿Qué harías en una situación de peligro?";
+                        break;
+                    case 2:
+                        preguntaTest.textContent = "¿Qué valoras más en la vida?";
+                        break;
+                    default:
+                        console.error("Pregunta no reconocida");
+                }
+            }
+
+            function responderTest(respuesta) {
+                // Simulación de respuestas correctas
+                if (respuesta === 0) {
+                    respuestasCorrectas++;
+                }
+
+                preguntaActual++;
+                barraProgreso.style.width = `${(preguntaActual / 3) * 100}%`;
+
+                if (preguntaActual < 3) {
+                    mostrarPregunta();
+                } else {
+                    // Mostrar resultado del test
+                    const resultadoTest = document.getElementById("resultado-test");
+                    resultadoTest.style.display = "block";
+
+                    let faccionGanadora;
+                    if (respuestasCorrectas >= 2) {
+                        faccionGanadora = "exploracion";
+                    } else if (respuestasCorrectas === 1) {
+                        faccionGanadora = "guarnicion";
+                    } else {
+                        faccionGanadora = "militar";
+                    }
+
+                    elegirFaccionDirecto(faccionGanadora);
+                }
+            }
+
+            mostrarPregunta();
         }
     </script>
 

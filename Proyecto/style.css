@@ -183,6 +183,24 @@ body {
     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
+.position-relative {
+    position: relative;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 0.875rem;
+}
+
+.position-relative:hover .btn-sm {
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
 .txt-sangre {
     color: var(--blood-red);
     font-weight: bold;
