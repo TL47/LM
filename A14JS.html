@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 14</title>
+</head>
+<body>
+    <script>
+        let sueldo=0, añosDeAntiguedad=0, nuevoSueldo=0;
+        sueldo=parseInt(prompt("Introduzca el sueldo"));
+        añosDeAntiguedad=parseInt(prompt("Introduzca los años de antigüedad"));
+        if (sueldo<500 && añosDeAntiguedad>=10)
+        {
+                nuevoSueldo=sueldo*0.2+sueldo
+                document.write("El nuevo sueldo es "+nuevoSueldo);
+        }
+        else
+        {
+            if (sueldo<500 && añosDeAntiguedad<10)
+            {
+                nuevoSueldo=sueldo*0.05+sueldo
+                document.write("El nuevo sueldo es "+nuevoSueldo);
+            }
+            else
+            {
+                if (sueldo>=500)
+                {
+                    document.write("El sueldo es: "+sueldo);
+                }
+                else
+                {
+                    document.write("El valor no es válido");
+                }
+            }
+        }
+    </script>
+</body>
+</html>

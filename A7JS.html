@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 7</title>
+</head>
+<body>
+    <script>
+        let numero1=0, numero2=0, suma, diferencia, producto, division;
+        numero1=parseInt(prompt("Introduzca el primer número:"));
+        numero2=parseInt(prompt("Introduzca el segundo número:"));
+        if (numero1>numero2)
+        {
+            suma=numero1+numero2;
+            diferencia=numero1-numero2;
+            document.write("La suma es: "+suma);
+            document.write("<br>La diferencia es: "+diferencia);
+        }
+        else
+        {
+            producto=numero1*numero2;
+            division=numero1/numero2;
+            document.write("El producto es: "+producto);
+            document.write("<br>La división del primero respecto al segundo es: "+division);
+        }
+    </script>
+</body>
+</html>

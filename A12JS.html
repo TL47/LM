@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 12</title>
+</head>
+<body>
+    <script>
+        let numero=0;
+        numero=parseInt(prompt("Introduce un valor de 1, 2 o 3 dígitos"));
+        if (numero<10)
+        {
+            document.write("El valor es de 1 dígito")
+        }
+        else
+        {
+            if (numero<100)
+        {
+            document.write("El valor es de 2 dígitos")
+        }
+        else
+        {
+            if (numero<1000)
+        {
+            document.write("El valor es de 3 dígitos")
+        }
+        else
+        {
+            document.write("El valor tiene más de 3 dígitos")
+        }
+        }
+        }
+    </script>
+</body>
+</html>

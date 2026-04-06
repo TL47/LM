@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 9</title>
+</head>
+<body>
+    <script>
+        let nota=0, promedio=0, contador=0, notaTotal=0;
+        for (contador>=1;contador<3;contador++)
+        {
+        nota=parseInt(prompt("Introduce tres notas"));
+        notaTotal=nota+notaTotal
+        }
+        promedio=notaTotal/3
+        if(promedio>=4)
+        {
+            document.write("Regular");
+        }
+        else
+        {
+            document.write("Reprobado");
+        }
+    </script>
+</body>
+</html>
