@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ejercicio5</title>
+  </head>
+  <body>
+    <main class="card">
+      <h1>Calculadora de Precio de Pizza</h1>
+      <p class="hint">Selecciona una pizza para ver su precio.</p>
+      <form>
+        <label for="pizza">Tipo de pizza: </label>
+        <select onchange="calcularPrecio()" name="pizza" id="pizza">
+          <option value="Jamon">Jamón y Queso</option>
+          <option value="Muzzarella">Muzzarella</option>
+          <option value="Morrones">Morrones</option>
+        </select>
+        <label for="precio">Precio: </label>
+        <input type="text" name="precio" id="precio" value="4€" disabled />
+      </form>
+    </main>
+    <script src="ejercicio5.js"></script>
+  </body>
+</html>

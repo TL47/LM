@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>ejercicio6</title>
+</head>
+
+<body>
+	<h1>Calculadora de precios</h1>
+	<h2>Introduzca precio y cantidad</h2>
+	<form>
+		<label for="pizza">Pizza: </label>
+		<select name="pizza" id="pizza">
+			<option value="queso">Queso</option>
+			<option value="jamon">Jamón y Queso</option>
+        	<option value="especial">Especial</option>
+		</select>
+		<label for="cantidad">Cantidad: </label>
+		<input type="number" name="cantidad" id="cantidad">
+		<button type="button" onclick="calcularPrecio()">Calcular precio</button>
+		<label for="total">Total: </label>
+		<input type="text" name="total" id="total" disabled>
+	</form>
+	<script src="ejercicio6.js"></script>
+</body>
+
+</html>
